@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "TVTII: Web Page Modifier",
+  "version": "1.0",
+  "description": "An extension that modifies the content of web pages.",
+  "content_scripts": [
+    {
+      "matches": ["*://lichess.org/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
