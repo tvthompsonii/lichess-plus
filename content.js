@@ -2,21 +2,28 @@
 
 
 // Add a menu item to work on the last weeks missed puzzles - Puzzle Review
-const streak_link = document.querySelector('#topnav a[href="/streak"]');
-if (streak_link) {
-    const groupDiv = streak_link.closest('div[role="group"]');
+const streakLink = document.querySelector('#topnav a[href="/streak"]');
+if (streakLink) {
+    const groupDiv = streakLink.closest('div[role="group"]');
     if (groupDiv) {
         const newLink = document.createElement('a');
         newLink.href = '/training/dashboard/7/improvementAreas';
         newLink.textContent = 'Puzzle Review';
-        groupDiv.insertBefore(newLink, streak_link);
+        groupDiv.insertBefore(newLink, streakLink);
     }
+}
+
+
+// Change the Study menu item to jump to personal studies
+const studyLink = document.querySelector('#topnav a[href="/study"]');
+if (studyLink) {
+    studyLink.href = "/study/mine/hot";
 }
 
 
 // Change the profile link to jump straight to the games tab
 const profileNode = document.getElementById('dasher_app');
-if (targetNode) {
+if (profileNode) {
     const observer = new MutationObserver((mutations) => {
         const userLink = profileNode.querySelector('a.user-link[href="/@/DrTomHere"]');
         if (userLink) {
@@ -32,7 +39,7 @@ if (targetNode) {
 }
 
 
-// Move game craetion to the left side
+// Move game creation to the left side
 const lobbyNode = document.getElementById('lobby__start');
 if (lobbyNode) {
     const streamsDiv = streak_link.closest('div[role="group"]');
