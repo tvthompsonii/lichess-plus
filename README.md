@@ -1,2 +1,2 @@
 # lichess-plus
-Chrome extension to pluss the lichess ui
+Chrome extension to plus up the lichess ui
